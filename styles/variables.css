@@ -1,0 +1,47 @@
+:root {
+    /* NEUTRAL COLOR */
+    --color--neutral-00: #FFFFFF;
+    --color--neutral-01: #EFF0F1;
+    --color--neutral-02: #DADBDD;
+    --color--neutral-03: #B5B7BC;
+    --color--neutral-04: #5A606D;
+    --color--neutral-05: #3A404D;
+    --color--neutral-06: #252B37;
+    --color--neutral-07: #111827;
+    --color--neutral-08: #091120;
+
+    /* PRIMARY COLOR */
+    --color--primary-01: #E0E3F5;
+    --color--primary-02: #B9C0E9;
+    --color--primary-03: #838ED8;
+    --color--primary-04: #4556C4;
+    --color--primary-05: #3646AB;
+    --color--primary-06: #27327C;
+
+
+    /* TYPOGRAPHY */
+    --font-family--base: 'Poppins', sans-serif;
+    --font-family--weight--light: 300;
+    --font-family--weight--regular: 400;
+    --font-family--weight--medium: 500;
+    --font-family--weight--semi-bold: 600;
+
+
+    /* BTN SMALL */
+    --btn--small--font-size: 1rem;
+    --btn--small--line-height: 1.5rem;
+    --btn--small--padding: 1rem 1rem;
+    --btn--small--border-radius: 1rem;
+
+    /* BTN MEDIUM */
+    --btn--medium--font-size: 1.125rem;
+    --btn--medium--line-height: 2rem;
+    --btn--medium--padding: 1.25rem 1.25rem;
+    --btn--medium--border-radius: 1.125rem;
+
+    /* BTN LARGE */
+    --btn--large--font-size: 1.5rem;
+    --btn--large--line-height: 2rem;
+    --btn--large--padding: 1.5rem 2rem;
+    --btn--large--border-radius: 1.5rem;
+}

@@ -4,375 +4,455 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/logo/mediplan-favicon.svg" type="image/x-icon">
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/media.css">
+
     <title>MediPlan</title>
 </head>
 
 <body>
     <header>
-        <nav class="nav">
+        <nav id="nav" class="nav">
             <div class="nav__head">
                 <a class="nav__logo" href="#hero">
                     <img src="/assets/logo/mediplan-logo-color-32px.svg"></img>
                 </a>
-                <button class="nav__toggle" aria-label="Abrir menú" id="navToggle">
-                    <span class="nav__toggle__icon">
-                        <svg class="nav__toggle__icon--burger" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                            viewBox="0 0 24 24" fill="none">
-                            <path
-                                d="M19.9997 17.0005C20.552 17.0005 21.0005 17.4478 21.0005 18.0001C21.0005 18.5524 20.552 18.9997 19.9997 18.9997H4.0001C3.44781 18.9997 3.00049 18.5524 3.00049 18.0001C3.00049 17.4478 3.44781 17.0005 4.0001 17.0005H19.9997ZM19.9997 11.0005C20.552 11.0005 21.0005 11.4478 21.0005 12.0001C21.0005 12.5524 20.552 12.9997 19.9997 12.9997H4.0001C3.44781 12.9997 3.00049 12.5524 3.00049 12.0001C3.00049 11.4478 3.44781 11.0005 4.0001 11.0005H19.9997ZM19.9997 5.00049C20.552 5.00049 21.0005 5.44781 21.0005 6.0001C21.0005 6.55238 20.552 6.99971 19.9997 6.99971H4.0001C3.44781 6.99971 3.00049 6.55238 3.00049 6.0001C3.00049 5.44781 3.44781 5.00049 4.0001 5.00049H19.9997Z"
-                                fill="#3A404D" />
-                        </svg>
-                        <svg class="nav__toggle__icon--close" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                            viewBox="0 0 24 24" fill="none">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z"
-                                fill="#3A404D" />
-                        </svg>
-                    </span>
+                <button id="nav-btn-burger" class="nav__btn nav__toggle-btn" aria-label="Abrir menú">
+                    <svg class="nav__btn-icon--burger" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M19.9997 17.0005C20.552 17.0005 21.0005 17.4478 21.0005 18.0001C21.0005 18.5524 20.552 18.9997 19.9997 18.9997H4.0001C3.44781 18.9997 3.00049 18.5524 3.00049 18.0001C3.00049 17.4478 3.44781 17.0005 4.0001 17.0005H19.9997ZM19.9997 11.0005C20.552 11.0005 21.0005 11.4478 21.0005 12.0001C21.0005 12.5524 20.552 12.9997 19.9997 12.9997H4.0001C3.44781 12.9997 3.00049 12.5524 3.00049 12.0001C3.00049 11.4478 3.44781 11.0005 4.0001 11.0005H19.9997ZM19.9997 5.00049C20.552 5.00049 21.0005 5.44781 21.0005 6.0001C21.0005 6.55238 20.552 6.99971 19.9997 6.99971H4.0001C3.44781 6.99971 3.00049 6.55238 3.00049 6.0001C3.00049 5.44781 3.44781 5.00049 4.0001 5.00049H19.9997Z"
+                            fill="#3A404D" />
+                    </svg>
                 </button>
             </div>
-            <ul class="nav__links .nav__links--active" id="navLinks">
+            <ul class="nav__menu">
                 <li class="nav__item"><a href="#feature" class="nav__link">Nuestra aplicación</a></li>
                 <li class="nav__item"><a href="#testimonial" class="nav__link">Testimonio</a></li>
                 <li class="nav__item"><a href="#faq" class="nav__link">Preguntas frecuentes</a></li>
                 <li class="nav__item"><a href="#about" class="nav__link">Sobre nosotros</a></li>
             </ul>
+            <div id="overlay" class="overlay">
+                <div class="overlay__head">
+                    <button id="nav-btn-close" class="overlay__btn nav__toggle-btn" aria-label="Abrir menú">
+                        <svg class="nav__toggle-icon--close" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 24 24" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z"
+                                fill="#3A404D" />
+                        </svg>
+                    </button>
+                </div>
+                <ul class="overlay__menu">
+                    <li class="overlay__item"><a href="#feature" class="overlay__link">Nuestra aplicación</a></li>
+                    <li class="overlay__item"><a href="#testimonial" class="overlay__link">Testimonio</a></li>
+                    <li class="overlay__item"><a href="#faq" class="overlay__link">Preguntas frecuentes</a></li>
+                    <li class="overlay__item"><a href="#about" class="overlay__link">Sobre nosotros</a></li>
+                </ul>
+                <div class="overlay__social-media">
+                    <a class="overlay__social-link" href="">
+                        <svg class="overlay__social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"
+                            fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M16.136 5.63604C17.8239 3.94821 20.1131 3 22.5 3H27C27.8284 3 28.5 3.67157 28.5 4.5V10.5C28.5 11.3284 27.8284 12 27 12H22.5V13.5H27C27.4619 13.5 27.898 13.7128 28.1823 14.0769C28.4666 14.441 28.5672 14.9157 28.4552 15.3638L26.9552 21.3638C26.7883 22.0316 26.1883 22.5 25.5 22.5H22.5V31.5C22.5 32.3284 21.8284 33 21 33H15C14.1716 33 13.5 32.3284 13.5 31.5V22.5H10.5C9.67157 22.5 9 21.8284 9 21V15C9 14.1716 9.67157 13.5 10.5 13.5H13.5V12C13.5 9.61305 14.4482 7.32387 16.136 5.63604ZM22.5 6C20.9087 6 19.3826 6.63214 18.2574 7.75736C17.1321 8.88258 16.5 10.4087 16.5 12V15C16.5 15.8284 15.8284 16.5 15 16.5H12V19.5H15C15.8284 19.5 16.5 20.1716 16.5 21V30H19.5V21C19.5 20.1716 20.1716 19.5 21 19.5H24.3288L25.0788 16.5H21C20.1716 16.5 19.5 15.8284 19.5 15V12C19.5 11.2043 19.8161 10.4413 20.3787 9.87868C20.9413 9.31607 21.7043 9 22.5 9H25.5V6H22.5Z" />
+                        </svg>
+                    </a>
+                    <a class="overlay__social-link" href="">
+                        <svg class="overlay__social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"
+                            fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 7.5C10.8065 7.5 9.66193 7.97411 8.81802 8.81802C7.97411 9.66193 7.5 10.8065 7.5 12V24C7.5 25.1935 7.97411 26.3381 8.81802 27.182C9.66193 28.0259 10.8065 28.5 12 28.5H24C25.1935 28.5 26.3381 28.0259 27.182 27.182C28.0259 26.3381 28.5 25.1935 28.5 24V12C28.5 10.8065 28.0259 9.66193 27.182 8.81802C26.3381 7.97411 25.1935 7.5 24 7.5H12ZM6.6967 6.6967C8.10322 5.29018 10.0109 4.5 12 4.5H24C25.9891 4.5 27.8968 5.29018 29.3033 6.6967C30.7098 8.10322 31.5 10.0109 31.5 12V24C31.5 25.9891 30.7098 27.8968 29.3033 29.3033C27.8968 30.7098 25.9891 31.5 24 31.5H12C10.0109 31.5 8.10322 30.7098 6.6967 29.3033C5.29018 27.8968 4.5 25.9891 4.5 24V12C4.5 10.0109 5.29018 8.10322 6.6967 6.6967ZM24.75 9.75C25.5784 9.75 26.25 10.4216 26.25 11.25V11.265C26.25 12.0934 25.5784 12.765 24.75 12.765C23.9216 12.765 23.25 12.0934 23.25 11.265V11.25C23.25 10.4216 23.9216 9.75 24.75 9.75ZM13.7574 13.7574C14.8826 12.6321 16.4087 12 18 12C19.5913 12 21.1174 12.6321 22.2426 13.7574C23.3679 14.8826 24 16.4087 24 18C24 19.5913 23.3679 21.1174 22.2426 22.2426C21.1174 23.3679 19.5913 24 18 24C16.4087 24 14.8826 23.3679 13.7574 22.2426C12.6321 21.1174 12 19.5913 12 18C12 16.4087 12.6321 14.8826 13.7574 13.7574ZM18 15C17.2043 15 16.4413 15.3161 15.8787 15.8787C15.3161 16.4413 15 17.2043 15 18C15 18.7957 15.3161 19.5587 15.8787 20.1213C16.4413 20.6839 17.2043 21 18 21C18.7957 21 19.5587 20.6839 20.1213 20.1213C20.6839 19.5587 21 18.7957 21 18C21 17.2043 20.6839 16.4413 20.1213 15.8787C19.5587 15.3161 18.7957 15 18 15Z" />
+                        </svg>
+                    </a>
+                    <a class="overlay__social-link" href="">
+                        <svg class="overlay__social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"
+                            fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M4.662 5.32197C4.9175 4.81776 5.43476 4.5 6.00001 4.5H12.4005C12.8783 4.5 13.3276 4.72765 13.6101 5.11297L20.022 13.8567L28.9393 4.93934C29.5251 4.35355 30.4749 4.35355 31.0607 4.93934C31.6465 5.52513 31.6465 6.47487 31.0607 7.06066L21.8169 16.3044L31.2096 29.113C31.5439 29.5688 31.5935 30.1738 31.338 30.678C31.0825 31.1822 30.5653 31.5 30 31.5H23.5995C23.1217 31.5 22.6724 31.2724 22.3899 30.887L15.978 22.1433L7.06067 31.0607C6.47488 31.6464 5.52513 31.6464 4.93935 31.0607C4.35356 30.4749 4.35356 29.5251 4.93935 28.9393L14.1831 19.6956L4.79039 6.88703C4.45613 6.4312 4.40649 5.82617 4.662 5.32197ZM18.5554 16.9299C18.6018 17.007 18.6557 17.0808 18.7171 17.1503L27.0399 28.5H24.3596L8.96006 7.5H11.6404L18.5554 16.9299Z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </nav>
     </header>
-    <section id="hero" class="section hero">
-        <div class="hero__content">
-            <h2 class="hero__title"> Tu plan de medicación siempre bajo control</h2>
-            <img class="hero__img" src="/assets/images/hero-img-320@x2.webp"
-                alt="Fotografía de una enfermera revisando un expediente">
-            <p class="hero__description">Organiza tus medicamentos, recibe recordatorios y notifica tus seres queridos
-                sobre el cumplimiento de tu tratamiento, todo desde tu celular.</p>
-            <button class="btn btn--primary btn-hero">
-                <svg class="button__icon--left" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                    viewBox="0 0 32 32" fill="none">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M19.0571 9.72402C19.5778 9.20332 20.422 9.20332 20.9427 9.72402L26.2761 15.0574C26.7968 15.5781 26.7968 16.4223 26.2761 16.943L20.9427 22.2763C20.422 22.797 19.5778 22.797 19.0571 22.2763C18.5364 21.7556 18.5364 20.9114 19.0571 20.3907L22.1143 17.3335H6.66659C5.93021 17.3335 5.33325 16.7365 5.33325 16.0002C5.33325 15.2638 5.93021 14.6668 6.66659 14.6668H22.1143L19.0571 11.6096C18.5364 11.0889 18.5364 10.2447 19.0571 9.72402Z"
-                        fill="white" />
-                </svg>
-                Registrarme ahora
-            </button>
-        </div>
-    </section>
-    <section id="feature" class="section feature">
-        <h2 class="feature__title">¿Qué podés hacer con MediPlan?</h2>
-        <div class="feature__cards">
-            <div class="feature-card feature-card--1">
-                <div class="feature-card__icon__wrap">
-                    <svg class="feature-card__icon" xmlns="http://www.w3.org/2000/svg" width="112" height="112"
-                        viewBox="0 0 112 112" fill="none">
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero__content-wrap">
+                <h2 class="hero__title">Tu plan de medicación siempre bajo control</h2>
+                <img class="hero__img" src="/assets/images/hero-img-320@x2.webp"
+                    alt="Fotografía de una enfermera revisando un expediente">
+                <p class="hero__description">
+                    Organiza tus medicamentos, recibe recordatorios y notifica tus seres queridos sobre el cumplimiento
+                    de
+                    tu tratamiento, todo desde tu celular.
+                </p>
+                <button class="btn btn--primary btn-hero">
+                    <svg class="btn__icon--left" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 32 32" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M46.6667 23.3333C45.429 23.3333 44.242 23.825 43.3668 24.7002C42.4917 25.5753 42 26.7623 42 28V32.6667H70V28C70 26.7623 69.5083 25.5753 68.6332 24.7002C67.758 23.825 66.571 23.3333 65.3333 23.3333H46.6667ZM79.3333 32.6667V28C79.3333 24.287 77.8583 20.726 75.2328 18.1005C72.6073 15.475 69.0464 14 65.3333 14H46.6667C42.9536 14 39.3927 15.475 36.7672 18.1005C34.1417 20.726 32.6667 24.287 32.6667 28V32.6667H28C24.287 32.6667 20.726 34.1417 18.1005 36.7672C15.475 39.3927 14 42.9536 14 46.6667V84C14 87.713 15.475 91.274 18.1005 93.8995C20.726 96.525 24.287 98 28 98H84C87.713 98 91.274 96.525 93.8995 93.8995C96.525 91.274 98 87.713 98 84V46.6667C98 42.9536 96.525 39.3927 93.8995 36.7672C91.274 34.1417 87.713 32.6667 84 32.6667H79.3333ZM28 42C26.7623 42 25.5753 42.4917 24.7002 43.3668C23.825 44.242 23.3333 45.429 23.3333 46.6667V84C23.3333 85.2377 23.825 86.4247 24.7002 87.2998C25.5753 88.175 26.7623 88.6667 28 88.6667H84C85.2377 88.6667 86.4247 88.175 87.2998 87.2998C88.175 86.4247 88.6667 85.2377 88.6667 84V46.6667C88.6667 45.429 88.175 44.242 87.2998 43.3668C86.4247 42.4917 85.2377 42 84 42H28ZM56 51.3333C58.5773 51.3333 60.6667 53.4227 60.6667 56V60.6667H65.3333C67.9107 60.6667 70 62.756 70 65.3333C70 67.9107 67.9107 70 65.3333 70H60.6667V74.6667C60.6667 77.244 58.5773 79.3333 56 79.3333C53.4227 79.3333 51.3333 77.244 51.3333 74.6667V70H46.6667C44.0893 70 42 67.9107 42 65.3333C42 62.756 44.0893 60.6667 46.6667 60.6667H51.3333V56C51.3333 53.4227 53.4227 51.3333 56 51.3333Z"
-                            fill="#27327C" />
-                    </svg>
-                </div>
-                <div class="feature-card__content">
-                    <h3 class="feature-card__title">Llevar el control de tu tratamiento</h3>
-                    <p class="feature-card__description">Organizá tus medicamentos en un solo lugar, configurá
-                        recordatorios que se adapten a tu rutina y marcá si tomaste o no cada dosis. Así, nunca perdés
-                        el hilo de tu tratamiento.</p>
-                </div>
-                <div class="feature-card__illustration">
-                    <img class="feature-card__illustration--F1" src="/assets/illustration/feature-card-illustration.svg" alt="">
-                </div>
-            </div>
-            <div class="feature-card feature-card--2">
-                <div class="feature-card__icon__wrap">
-                    <svg class="feature-card__icon" xmlns="http://www.w3.org/2000/svg" width="112" height="112"
-                        viewBox="0 0 112 112" fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M51.3333 18.6667C50.0956 18.6667 48.9086 19.1584 48.0335 20.0335C47.1583 20.9087 46.6666 22.0957 46.6666 23.3334C46.6666 24.5711 47.1583 25.758 48.0335 26.6332C48.9086 27.5084 50.0956 28 51.3333 28H60.6666C61.9043 28 63.0913 27.5084 63.9665 26.6332C64.8416 25.758 65.3333 24.5711 65.3333 23.3334C65.3333 22.0957 64.8416 20.9087 63.9665 20.0335C63.0913 19.1584 61.9043 18.6667 60.6666 18.6667H51.3333ZM41.4338 13.4339C44.0593 10.8084 47.6203 9.33337 51.3333 9.33337H60.6666C64.3797 9.33337 67.9406 10.8084 70.5661 13.4339C72.0567 14.9244 73.1764 16.7165 73.866 18.6667H79.3333C83.0463 18.6667 86.6073 20.1417 89.2328 22.7672C91.8583 25.3927 93.3333 28.9537 93.3333 32.6667V88.6667C93.3333 92.3797 91.8583 95.9407 89.2328 98.5662C86.6073 101.192 83.0463 102.667 79.3333 102.667H32.6666C28.9536 102.667 25.3926 101.192 22.7671 98.5662C20.1416 95.9407 18.6666 92.3797 18.6666 88.6667V32.6667C18.6666 28.9537 20.1416 25.3927 22.7671 22.7672C25.3926 20.1417 28.9536 18.6667 32.6666 18.6667H38.134C38.8235 16.7165 39.9432 14.9244 41.4338 13.4339ZM38.134 28H32.6666C31.4289 28 30.242 28.4917 29.3668 29.3669C28.4916 30.242 28 31.429 28 32.6667V88.6667C28 89.9044 28.4916 91.0914 29.3668 91.9665C30.242 92.8417 31.429 93.3334 32.6666 93.3334H79.3333C80.571 93.3334 81.758 92.8417 82.6331 91.9665C83.5083 91.0914 84 89.9044 84 88.6667V32.6667C84 31.429 83.5083 30.242 82.6331 29.3669C81.758 28.4917 80.571 28 79.3333 28H73.866C73.1764 29.9503 72.0567 31.7423 70.5661 33.2329C67.9406 35.8584 64.3797 37.3334 60.6666 37.3334H51.3333C47.6203 37.3334 44.0593 35.8584 41.4338 33.2329C39.9432 31.7423 38.8235 29.9503 38.134 28ZM42 51.3334C44.5773 51.3334 46.6666 53.4227 46.6666 56V79.3334C46.6666 81.9107 44.5773 84 42 84C39.4226 84 37.3333 81.9107 37.3333 79.3334V56C37.3333 53.4227 39.4226 51.3334 42 51.3334ZM70 60.6667C72.5773 60.6667 74.6666 62.756 74.6666 65.3334V79.3334C74.6666 81.9107 72.5773 84 70 84C67.4226 84 65.3333 81.9107 65.3333 79.3334V65.3334C65.3333 62.756 67.4226 60.6667 70 60.6667ZM56 70C58.5773 70 60.6666 72.0894 60.6666 74.6667V79.3334C60.6666 81.9107 58.5773 84 56 84C53.4226 84 51.3333 81.9107 51.3333 79.3334V74.6667C51.3333 72.0894 53.4226 70 56 70Z"
-                            fill="#27327C" />
-                    </svg>
-                </div>
-                <div class="feature-card__content">
-                    <h3 class="feature-card__title">Controlar tu stock de medicamentos</h3>
-                    <p class="feature-card__description">Hacé un seguimiento automático del stock y recibí alertas
-                        cuando estés por quedarte sin dosis. Así, siempre tenés tiempo para reponer.</p>
-                </div>
-                <div class="feature-card__illustration">
-                    <img class="feature-card__illustration--F2" src="/assets/illustration/feature-card-illustration.svg" alt="">
-                </div>
-            </div>
-            <div class="feature-card feature-card--3">
-                <div class="feature-card__icon__wrap">
-                    <svg class="feature-card__icon" xmlns="http://www.w3.org/2000/svg" width="112" height="112"
-                        viewBox="0 0 112 112" fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M39.253 23.384C36.6906 23.1106 34.0993 23.3708 31.6424 24.1481C29.1854 24.9254 26.9161 26.203 24.9772 27.9005C23.0382 29.5979 21.4718 31.6784 20.3765 34.011C19.2811 36.3436 18.6806 38.8777 18.6128 41.4538C18.5449 44.0299 19.0112 46.5921 19.9822 48.9791C20.9532 51.3661 22.4079 53.5262 24.2548 55.3234L24.2843 55.352L56.0003 86.7638L61.1067 81.7064L55.0335 75.6332C53.2111 73.8107 53.2111 70.856 55.0335 69.0335C56.856 67.2111 59.8107 67.2111 61.6332 69.0335L67.7382 75.1386L72.8297 70.096L66.7002 63.9665C64.8777 62.1441 64.8777 59.1893 66.7002 57.3668C68.5226 55.5444 71.4774 55.5444 73.2998 57.3668L79.4612 63.5282L84.5525 58.4857L77.2001 51.1332C75.2904 49.2236 72.7005 48.1508 69.9999 48.1508C67.2993 48.1508 64.7093 49.2236 62.7997 51.1332L58.133 55.7998C53.0906 60.8423 44.9092 60.8423 39.8667 55.7998L37.3327 53.2658C35.583 51.5156 34.5995 49.1415 34.5995 46.6667C34.5995 44.1918 35.5825 41.8183 37.3322 40.068L49.5319 27.8683C48.6068 27.0627 47.602 26.348 46.5311 25.7364C44.2935 24.4582 41.8154 23.6573 39.253 23.384ZM58.9884 31.6112L43.9329 46.6667L46.4664 49.2002C47.8639 50.5977 50.1358 50.5977 51.5334 49.2002L56.2 44.5335C59.86 40.8736 64.8239 38.8175 69.9999 38.8175C75.1758 38.8175 80.1397 40.8736 83.7997 44.5335L90.7543 51.4881C91.2164 50.6996 91.6211 49.8764 91.9643 49.0246C92.9242 46.6418 93.382 44.0864 93.3089 41.5186C93.2359 38.9507 92.6336 36.4255 91.5398 34.1011C90.4459 31.7767 88.8841 29.7031 86.952 28.0101C85.0199 26.317 82.7591 25.041 80.3112 24.2619C77.8633 23.4828 75.2809 23.2173 72.7257 23.4821C70.1704 23.7469 67.6973 24.5363 65.4612 25.8008C63.2251 27.0654 61.274 28.7779 59.7302 30.8311C59.5115 31.1219 59.2622 31.383 58.9884 31.6112ZM93.9621 62.3025C94.0679 62.2155 94.1708 62.123 94.2704 62.0252C97.0194 59.325 99.1816 56.0864 100.622 52.5122C102.061 48.9379 102.748 45.105 102.638 41.2532C102.529 37.4013 101.625 33.6136 99.9847 30.127C98.344 26.6404 96.0012 23.53 93.1031 20.9904C90.2049 18.4509 86.8138 16.5369 83.1419 15.3682C79.47 14.1995 75.5964 13.8013 71.7636 14.1985C67.9307 14.5957 64.2211 15.7798 60.8669 17.6766C59.1276 18.6602 57.5032 19.8245 56.0194 21.147C54.5341 19.8082 52.9058 18.6289 51.1602 17.6319C47.8037 15.7147 44.0866 14.5133 40.243 14.1033C36.3994 13.6933 32.5125 14.0835 28.8271 15.2495C25.1417 16.4155 21.7376 18.3319 18.8293 20.878C15.9209 23.4242 13.5712 26.545 11.9282 30.0439C10.2852 33.5428 9.38444 37.3439 9.28266 41.208C9.18087 45.0721 9.88027 48.9154 11.3368 52.496C12.7906 56.0698 14.9673 59.3046 17.7303 61.9974L52.7164 96.6476C54.5351 98.4489 57.4654 98.4489 59.2841 96.6476L93.9621 62.3025Z"
-                            fill="#27327C" />
-                    </svg>
-                </div>
-                <div class="feature-card__content">
-                    <h3 class="feature-card__title">Compartir tu progreso con quienes te cuidan</h3>
-                    <p class="feature-card__description">Mantén a tus seres queridos informados. Comparte el progreso y
-                        estado de tu tratamiento con familiares o cuidadores para que estén al tanto de tu bienestar.
-                    </p>
-                </div>
-                <div class="feature-card__illustration">
-                    <img class="feature-card__illustration--F3" src="/assets/illustration/feature-card-illustration.svg" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="testimonial" class="section testimonial">
-        <div class="section__overview testimonial__overview">
-            <h2 class="overview__title">Historias de nuestros usuarios</h2>
-            <p class="overview__description testimonial__overview__description">Miles de personas ya gestionan su
-                tratamiento de manera sencilla
-                con nuestra aplicación </p>
-        </div>
-        <div class="testimonial__cards">
-            <div class="testimonial-card">
-                <div class="testimonial-card__avatar">
-                    <img src="/assets/avatars/testimonial-avatar-rounded-1@x2.webp"
-                        alt="Foto de perfil del usuario Ana">
-                </div>
-                <div class="testimonial-card__content">
-                    <p class="testimonial-card__description">"Gracias a esta app, no me preocupo más por olvidar mis
-                        medicamentos.
-                        Los recordatorios son puntuales y me avisan si me estoy quedando sin stock. Además, mis hijos se
-                        sienten mucho más tranquilos al recibir informes sobre mi salud."</p>
-                    <p class="testimonial-card__label">Ana G., 65 años</p>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-card__avatar">
-                    <img src="/assets/avatars/testimonial-avatar-rounded-2@x2.webp" alt="Foto de perfil">
-                </div>
-                <div class="testimonial-card__content">
-                    <p class="testimonial-card__description">"Como cuidador de mi madre, la sincronización con la app me
-                        ha
-                        sido
-                        invaluable. Sé en todo momento si está siguiendo su tratamiento y puedo tomar medidas si algo no
-                        va como debería."</p>
-                    <p class="testimonial-card__label">Carlos M., 38 años</p>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-card__avatar">
-                    <img src="/assets/avatars/testimonial-avatar-rounded-3@x2.webp" alt="">
-                </div>
-                <div class="testimonial-card__content">
-                    <p class="testimonial-card__description">"El sistema de análisis predictivo me ha ayudado a
-                        planificar
-                        mejor las compras de mis medicamentos. Es increíble saber exactamente cuándo necesitaré
-                        reabastecerme."</p>
-                    <p class="testimonial-card__label">Laura P., 29 años</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="faq" class="section faq">
-        <div class="section__overview faq__overview">
-            <h2 class="overview__title">Dudas comunes sobre nuestra app</h2>
-            <p class="overview__description">Aquí respondemos algunas de las dudas más comunes para que puedas
-                empezar a usar nuestra plataforma sin complicaciones.</p>
-        </div>
-        <div class="faq__cards">
-            <div class="faq__cards__wrap">
-                <div class="faq-card faq-1">
-                    <button class="faq-card__toggle">
-                        <svg class="faq-card__toggle__icon faq-card__toggle__icon--chevron-down" xmlns="http://www.w3.org/2000/svg" width="32"
-                            height="32" viewBox="0 0 32 32" fill="none">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M9.72402 12.3905C10.2447 11.8698 11.0889 11.8698 11.6096 12.3905L16.0002 16.781L20.3907 12.3905C20.9114 11.8698 21.7556 11.8698 22.2763 12.3905C22.797 12.9112 22.797 13.7554 22.2763 14.2761L16.943 19.6095C16.4223 20.1302 15.5781 20.1302 15.0574 19.6095L9.72402 14.2761C9.20332 13.7554 9.20332 12.9112 9.72402 12.3905Z"
-                                fill="#3646AB" />
-                        </svg>
-                        <svg class="faq-card__toggle__icon faq-card__toggle__icon--chevron-up" xmlns="http://www.w3.org/2000/svg" width="32"
-                            height="32" viewBox="0 0 32 32" fill="none">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M15.0574 12.3905C15.5781 11.8698 16.4223 11.8698 16.943 12.3905L22.2763 17.7239C22.797 18.2446 22.797 19.0888 22.2763 19.6095C21.7556 20.1302 20.9114 20.1302 20.3907 19.6095L16.0002 15.219L11.6096 19.6095C11.0889 20.1302 10.2447 20.1302 9.72402 19.6095C9.20332 19.0888 9.20332 18.2446 9.72402 17.7239L15.0574 12.3905Z"
-                                fill="#3646AB" />
-                        </svg>
-                    </button>
-                    <h3 class="faq-card__title">¿Cómo agrego mis medicamentos en la app?</h3>
-                    <p class="faq-card__description faq-card__description--visible">Simplemente selecciona ‘Agregar
-                        medicamento’, ingresa el nombre,
-                        dosis, frecuencia y duración del
-                        tratamiento. Luego podrás configurar recordatorios.</p>
-                </div>
-                <div class="faq-card faq-2">
-                    <button class="faq-card__toggle">
-                        <svg class="faq-card__toggle__icon faq-card__toggle__icon--chevron-down" xmlns="http://www.w3.org/2000/svg" width="32"
-                            height="32" viewBox="0 0 32 32" fill="none">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M9.72402 12.3905C10.2447 11.8698 11.0889 11.8698 11.6096 12.3905L16.0002 16.781L20.3907 12.3905C20.9114 11.8698 21.7556 11.8698 22.2763 12.3905C22.797 12.9112 22.797 13.7554 22.2763 14.2761L16.943 19.6095C16.4223 20.1302 15.5781 20.1302 15.0574 19.6095L9.72402 14.2761C9.20332 13.7554 9.20332 12.9112 9.72402 12.3905Z"
-                                fill="#3646AB" />
-                        </svg>
-                        <svg class="faq-card__toggle__icon faq-card__toggle__icon--chevron-up" xmlns="http://www.w3.org/2000/svg" width="32"
-                            height="32" viewBox="0 0 32 32" fill="none">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M15.0574 12.3905C15.5781 11.8698 16.4223 11.8698 16.943 12.3905L22.2763 17.7239C22.797 18.2446 22.797 19.0888 22.2763 19.6095C21.7556 20.1302 20.9114 20.1302 20.3907 19.6095L16.0002 15.219L11.6096 19.6095C11.0889 20.1302 10.2447 20.1302 9.72402 19.6095C9.20332 19.0888 9.20332 18.2446 9.72402 17.7239L15.0574 12.3905Z"
-                                fill="#3646AB" />
-                        </svg>
-                    </button>
-                    <h3 class="faq-card__title">¿Puedo agregar varios medicamentos con diferentes horarios de toma?
-                    </h3>
-                    <p class="faq-card__description">Sí, puedes añadir tantos medicamentos como necesites, cada uno con
-                        su propio horario de recordatorios y detalles específicos. La app te permite gestionar
-                        tratamientos complejos de forma sencilla.
-                    </p>
-                </div>
-            </div>
-            <div class="faq__cards__wrap">
-                <div class="faq-card faq-3">
-                    <button class="faq-card__toggle">
-                        <svg class="faq-card__toggle__icon faq-card__toggle__icon--chevron-down" xmlns="http://www.w3.org/2000/svg" width="32"
-                            height="32" viewBox="0 0 32 32" fill="none">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M9.72402 12.3905C10.2447 11.8698 11.0889 11.8698 11.6096 12.3905L16.0002 16.781L20.3907 12.3905C20.9114 11.8698 21.7556 11.8698 22.2763 12.3905C22.797 12.9112 22.797 13.7554 22.2763 14.2761L16.943 19.6095C16.4223 20.1302 15.5781 20.1302 15.0574 19.6095L9.72402 14.2761C9.20332 13.7554 9.20332 12.9112 9.72402 12.3905Z"
-                                fill="#3646AB" />
-                        </svg>
-                        <svg class="faq-card__toggle__icon faq-card__toggle__icon--chevron-up" xmlns="http://www.w3.org/2000/svg" width="32"
-                            height="32" viewBox="0 0 32 32" fill="none">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M15.0574 12.3905C15.5781 11.8698 16.4223 11.8698 16.943 12.3905L22.2763 17.7239C22.797 18.2446 22.797 19.0888 22.2763 19.6095C21.7556 20.1302 20.9114 20.1302 20.3907 19.6095L16.0002 15.219L11.6096 19.6095C11.0889 20.1302 10.2447 20.1302 9.72402 19.6095C9.20332 19.0888 9.20332 18.2446 9.72402 17.7239L15.0574 12.3905Z"
-                                fill="#3646AB" />
-                        </svg>
-                    </button>
-                    <h3 class="faq-card__title">¿Puedo agregar a más de un familiar o cuidador?</h3>
-                    <p class="faq-card__description">Sí, puedes agregar múltiples contactos de confianza que recibirán
-                        notificaciones y resúmenes sobre el
-                        estado de tu tratamiento</p>
-                </div>
-                <div class="faq-card faq-4">
-                    <button class="faq-card__toggle">
-                        <svg class="faq-card__toggle__icon faq-card__toggle__icon--chevron-down" xmlns="http://www.w3.org/2000/svg" width="32"
-                            height="32" viewBox="0 0 32 32" fill="none">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M9.72402 12.3905C10.2447 11.8698 11.0889 11.8698 11.6096 12.3905L16.0002 16.781L20.3907 12.3905C20.9114 11.8698 21.7556 11.8698 22.2763 12.3905C22.797 12.9112 22.797 13.7554 22.2763 14.2761L16.943 19.6095C16.4223 20.1302 15.5781 20.1302 15.0574 19.6095L9.72402 14.2761C9.20332 13.7554 9.20332 12.9112 9.72402 12.3905Z"
-                                fill="#3646AB" />
-                        </svg>
-                        <svg class="faq-card__toggle__icon faq-card__toggle__icon--chevron-up" xmlns="http://www.w3.org/2000/svg" width="32"
-                            height="32" viewBox="0 0 32 32" fill="none">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M15.0574 12.3905C15.5781 11.8698 16.4223 11.8698 16.943 12.3905L22.2763 17.7239C22.797 18.2446 22.797 19.0888 22.2763 19.6095C21.7556 20.1302 20.9114 20.1302 20.3907 19.6095L16.0002 15.219L11.6096 19.6095C11.0889 20.1302 10.2447 20.1302 9.72402 19.6095C9.20332 19.0888 9.20332 18.2446 9.72402 17.7239L15.0574 12.3905Z"
-                                fill="#3646AB" />
-                        </svg>
-                    </button>
-                    <h3 class="faq-card__title">¿Cómo funciona el análisis predictivo con IA?</h3>
-                    <p class="faq-card__description">La IA analiza tu consumo de medicamentos y te sugiere cuándo será
-                        necesario reabastecer tu stock,
-                        ayudándote a planificar mejor tus compras.</p>
-                </div>
-                <div class="faq-card faq-5">
-                    <button class="faq-card__toggle">
-                        <svg class="faq-card__toggle__icon faq-card__toggle__icon--chevron-down" xmlns="http://www.w3.org/2000/svg" width="32"
-                            height="32" viewBox="0 0 32 32" fill="none">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M9.72402 12.3905C10.2447 11.8698 11.0889 11.8698 11.6096 12.3905L16.0002 16.781L20.3907 12.3905C20.9114 11.8698 21.7556 11.8698 22.2763 12.3905C22.797 12.9112 22.797 13.7554 22.2763 14.2761L16.943 19.6095C16.4223 20.1302 15.5781 20.1302 15.0574 19.6095L9.72402 14.2761C9.20332 13.7554 9.20332 12.9112 9.72402 12.3905Z"
-                                fill="#3646AB" />
-                        </svg>
-                        <svg class="faq-card__toggle__icon faq-card__toggle__icon--chevron-up" xmlns="http://www.w3.org/2000/svg" width="32"
-                            height="32" viewBox="0 0 32 32" fill="none">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M15.0574 12.3905C15.5781 11.8698 16.4223 11.8698 16.943 12.3905L22.2763 17.7239C22.797 18.2446 22.797 19.0888 22.2763 19.6095C21.7556 20.1302 20.9114 20.1302 20.3907 19.6095L16.0002 15.219L11.6096 19.6095C11.0889 20.1302 10.2447 20.1302 9.72402 19.6095C9.20332 19.0888 9.20332 18.2446 9.72402 17.7239L15.0574 12.3905Z"
-                                fill="#3646AB" />
-                        </svg>
-                    </button>
-                    <h3 class="faq-card__title">¿Es segura la información que ingreso en la app?</h3>
-                    <p class="faq-card__description">Sí, toda tu información está protegida con altos estándares de
-                        seguridad y encriptación. Tu privacidad es nuestra prioridad.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="about" class="section about">
-        <div class="section__overview about__overview">
-            <h2 class="overview__title">Sobre nosotros</h2>
-            <p class="overview__description">Nuestra misión es facilitar la gestión de tratamientos médicos, ayudando a
-                los pacientes y sus familiares a mantenerse organizados y saludables</p>
-        </div>
-        <div class="about__cards">
-            <div class="card-team">
-                <h3 class="card-team__title">Personas que forman parte de MediPlan</h3>
-                <div class="card-team__avatars">
-                    <img src="/assets/avatars/team-avatar-rounded-1@x2.webp" alt="Fotografía de un empleado de MediPlan"
-                        class="card-team__avatar">
-                    <img src="/assets/avatars/team-avatar-rounded-2@x2.webp" alt="Fotografía de un empleado de MediPlan"
-                        class="card-team__avatar">
-                    <img src="/assets/avatars/team-avatar-rounded-3@x2.webp" alt="Fotografía de un empleado de MediPlan"
-                        class="card-team__avatar">
-                    <img src="/assets/avatars/team-avatar-rounded-4@x2.webp" alt="Fotografía de un empleado de MediPlan"
-                        class="card-team__avatar">
-                    <img src="/assets/avatars/team-avatar-rounded-5@x2.webp" alt="Fotografía de un empleado de MediPlan"
-                        class="card-team__avatar">
-                    <img src="/assets/avatars/team-avatar-rounded-6@x2.webp" alt="Fotografía de un empleado de MediPlan"
-                        class="card-team__avatar">
-                    <img src="/assets/avatars/team-avatar-rounded-7@x2.webp" alt="Fotografía de un empleado de MediPlan"
-                        class="card-team__avatar">
-                    <img src="/assets/avatars/team-avatar-rounded-8@x2.webp" alt="Fotografía de un empleado de MediPlan"
-                        class="card-team__avatar">
-                    <img src="/assets/avatars/team-avatar-rounded-9@x2.webp" alt="Fotografía de un empleado de MediPlan"
-                        class="card-team__avatar">
-                </div>
-                <p class="card-team__description">Nuestro equipo está formado por expertos en tecnología, salud y
-                    diseño, unidos por la idea de mejorar la calidad de vida de los usuarios.</p>
-            </div>
-            <div class="card-boss">
-                <img class="card-boss__img" src="/assets/images/about-boss-320@x2.webp"
-                    alt="Fotografía del CEO de MediPlan">
-                <div class="card-boss__content">
-                    <p class="card-boss__description">“Después de ver a nuestros seres queridos lidiar con tratamientos
-                        médicos complejos, nos propusimos crear una solución que hiciera el proceso más fácil y menos
-                        estresante.”</p>
-                    <p class="card-boss__label">Martín Bruno, CEO de MediPlan</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="download" class="section download">
-        <div class="card-download">
-            <div class="card-download__content">
-                <h2 class="card-download__title">Descarga la app para tomar tus medicamentos siempre a tiempo</h2>
-                <button class="btn btn--primary card-download__btn">
-                    Descargar aplicación
-                    <svg class="button__icon--right" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                        viewBox="0 0 36 36" fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M18 4.5C18.8284 4.5 19.5 5.17157 19.5 6V20.3787L24.4393 15.4393C25.0251 14.8536 25.9749 14.8536 26.5607 15.4393C27.1464 16.0251 27.1464 16.9749 26.5607 17.5607L19.0607 25.0607C18.4749 25.6464 17.5251 25.6464 16.9393 25.0607L9.43934 17.5607C8.85355 16.9749 8.85355 16.0251 9.43934 15.4393C10.0251 14.8536 10.9749 14.8536 11.5607 15.4393L16.5 20.3787V6C16.5 5.17157 17.1716 4.5 18 4.5ZM6 24C6.82843 24 7.5 24.6716 7.5 25.5V28.5C7.5 28.8978 7.65804 29.2794 7.93934 29.5607C8.22064 29.842 8.60218 30 9 30H27C27.3978 30 27.7794 29.842 28.0607 29.5607C28.342 29.2794 28.5 28.8978 28.5 28.5V25.5C28.5 24.6716 29.1716 24 30 24C30.8284 24 31.5 24.6716 31.5 25.5V28.5C31.5 29.6935 31.0259 30.8381 30.182 31.682C29.3381 32.5259 28.1935 33 27 33H9C7.80653 33 6.66193 32.5259 5.81802 31.682C4.97411 30.8381 4.5 29.6935 4.5 28.5V25.5C4.5 24.6716 5.17157 24 6 24Z"
+                            d="M19.0571 9.72402C19.5778 9.20332 20.422 9.20332 20.9427 9.72402L26.2761 15.0574C26.7968 15.5781 26.7968 16.4223 26.2761 16.943L20.9427 22.2763C20.422 22.797 19.5778 22.797 19.0571 22.2763C18.5364 21.7556 18.5364 20.9114 19.0571 20.3907L22.1143 17.3335H6.66659C5.93021 17.3335 5.33325 16.7365 5.33325 16.0002C5.33325 15.2638 5.93021 14.6668 6.66659 14.6668H22.1143L19.0571 11.6096C18.5364 11.0889 18.5364 10.2447 19.0571 9.72402Z"
                             fill="white" />
                     </svg>
+                    Registrarme ahora
                 </button>
             </div>
-            <img class="card-download__img" src="/assets/images/download-img-320@x2.webp"
-                alt="Fotografía de una persona descargando MediPlan con su teléfono.">
-        </div>
-    </section>
-    <footer class="section footer">
-        <div class="footer__content">
+        </section>
+        <section id="feature" class="section feature">
+            <div class="feature__content-wrap">
+                <h2 class="feature__title">¿Qué podés hacer con MediPlan?</h2>
+                <div class="feature__cards">
+                    <div class="feature-card">
+                        <div class="feature-card__icon-wrap">
+                            <svg class="feature-card__icon" xmlns="http://www.w3.org/2000/svg" width="112" height="112"
+                                viewBox="0 0 112 112" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M46.6667 23.3333C45.429 23.3333 44.242 23.825 43.3668 24.7002C42.4917 25.5753 42 26.7623 42 28V32.6667H70V28C70 26.7623 69.5083 25.5753 68.6332 24.7002C67.758 23.825 66.571 23.3333 65.3333 23.3333H46.6667ZM79.3333 32.6667V28C79.3333 24.287 77.8583 20.726 75.2328 18.1005C72.6073 15.475 69.0464 14 65.3333 14H46.6667C42.9536 14 39.3927 15.475 36.7672 18.1005C34.1417 20.726 32.6667 24.287 32.6667 28V32.6667H28C24.287 32.6667 20.726 34.1417 18.1005 36.7672C15.475 39.3927 14 42.9536 14 46.6667V84C14 87.713 15.475 91.274 18.1005 93.8995C20.726 96.525 24.287 98 28 98H84C87.713 98 91.274 96.525 93.8995 93.8995C96.525 91.274 98 87.713 98 84V46.6667C98 42.9536 96.525 39.3927 93.8995 36.7672C91.274 34.1417 87.713 32.6667 84 32.6667H79.3333ZM28 42C26.7623 42 25.5753 42.4917 24.7002 43.3668C23.825 44.242 23.3333 45.429 23.3333 46.6667V84C23.3333 85.2377 23.825 86.4247 24.7002 87.2998C25.5753 88.175 26.7623 88.6667 28 88.6667H84C85.2377 88.6667 86.4247 88.175 87.2998 87.2998C88.175 86.4247 88.6667 85.2377 88.6667 84V46.6667C88.6667 45.429 88.175 44.242 87.2998 43.3668C86.4247 42.4917 85.2377 42 84 42H28ZM56 51.3333C58.5773 51.3333 60.6667 53.4227 60.6667 56V60.6667H65.3333C67.9107 60.6667 70 62.756 70 65.3333C70 67.9107 67.9107 70 65.3333 70H60.6667V74.6667C60.6667 77.244 58.5773 79.3333 56 79.3333C53.4227 79.3333 51.3333 77.244 51.3333 74.6667V70H46.6667C44.0893 70 42 67.9107 42 65.3333C42 62.756 44.0893 60.6667 46.6667 60.6667H51.3333V56C51.3333 53.4227 53.4227 51.3333 56 51.3333Z" />
+                            </svg>
+                        </div>
+                        <div class="feature-card__content">
+                            <h3 class="feature-card__title">Llevar el control de tu tratamiento</h3>
+                            <p class="feature-card__description">
+                                Crea recordatorios que se adapten a tu rutina y marca si tomaste o no cada dosis. Así,
+                                nunca
+                                perdés el hilo de tu tratamiento.
+                            </p>
+                        </div>
+                        <div class="feature-card__illustration">
+                            <img class="feature-card__illustration--F1"
+                                src="/assets/illustration/feature-card-illustration.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card__icon-wrap">
+                            <svg class="feature-card__icon" xmlns="http://www.w3.org/2000/svg" width="112" height="112"
+                                viewBox="0 0 112 112" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M51.3333 18.6667C50.0956 18.6667 48.9086 19.1584 48.0335 20.0335C47.1583 20.9087 46.6666 22.0957 46.6666 23.3334C46.6666 24.5711 47.1583 25.758 48.0335 26.6332C48.9086 27.5084 50.0956 28 51.3333 28H60.6666C61.9043 28 63.0913 27.5084 63.9665 26.6332C64.8416 25.758 65.3333 24.5711 65.3333 23.3334C65.3333 22.0957 64.8416 20.9087 63.9665 20.0335C63.0913 19.1584 61.9043 18.6667 60.6666 18.6667H51.3333ZM41.4338 13.4339C44.0593 10.8084 47.6203 9.33337 51.3333 9.33337H60.6666C64.3797 9.33337 67.9406 10.8084 70.5661 13.4339C72.0567 14.9244 73.1764 16.7165 73.866 18.6667H79.3333C83.0463 18.6667 86.6073 20.1417 89.2328 22.7672C91.8583 25.3927 93.3333 28.9537 93.3333 32.6667V88.6667C93.3333 92.3797 91.8583 95.9407 89.2328 98.5662C86.6073 101.192 83.0463 102.667 79.3333 102.667H32.6666C28.9536 102.667 25.3926 101.192 22.7671 98.5662C20.1416 95.9407 18.6666 92.3797 18.6666 88.6667V32.6667C18.6666 28.9537 20.1416 25.3927 22.7671 22.7672C25.3926 20.1417 28.9536 18.6667 32.6666 18.6667H38.134C38.8235 16.7165 39.9432 14.9244 41.4338 13.4339ZM38.134 28H32.6666C31.4289 28 30.242 28.4917 29.3668 29.3669C28.4916 30.242 28 31.429 28 32.6667V88.6667C28 89.9044 28.4916 91.0914 29.3668 91.9665C30.242 92.8417 31.429 93.3334 32.6666 93.3334H79.3333C80.571 93.3334 81.758 92.8417 82.6331 91.9665C83.5083 91.0914 84 89.9044 84 88.6667V32.6667C84 31.429 83.5083 30.242 82.6331 29.3669C81.758 28.4917 80.571 28 79.3333 28H73.866C73.1764 29.9503 72.0567 31.7423 70.5661 33.2329C67.9406 35.8584 64.3797 37.3334 60.6666 37.3334H51.3333C47.6203 37.3334 44.0593 35.8584 41.4338 33.2329C39.9432 31.7423 38.8235 29.9503 38.134 28ZM42 51.3334C44.5773 51.3334 46.6666 53.4227 46.6666 56V79.3334C46.6666 81.9107 44.5773 84 42 84C39.4226 84 37.3333 81.9107 37.3333 79.3334V56C37.3333 53.4227 39.4226 51.3334 42 51.3334ZM70 60.6667C72.5773 60.6667 74.6666 62.756 74.6666 65.3334V79.3334C74.6666 81.9107 72.5773 84 70 84C67.4226 84 65.3333 81.9107 65.3333 79.3334V65.3334C65.3333 62.756 67.4226 60.6667 70 60.6667ZM56 70C58.5773 70 60.6666 72.0894 60.6666 74.6667V79.3334C60.6666 81.9107 58.5773 84 56 84C53.4226 84 51.3333 81.9107 51.3333 79.3334V74.6667C51.3333 72.0894 53.4226 70 56 70Z" />
+                            </svg>
+                        </div>
+                        <div class="feature-card__content">
+                            <h3 class="feature-card__title">Controlar tu stock de medicamentos</h3>
+                            <p class="feature-card__description">
+                                Hace un seguimiento automático del stock y recibí alertas cuando estés por quedarte sin
+                                dosis. Así, siempre tenés tiempo para reponer.
+                            </p>
+                        </div>
+                        <div class="feature-card__illustration">
+                            <img class="feature-card__illustration--F2"
+                                src="/assets/illustration/feature-card-illustration.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card__icon-wrap">
+                            <svg class="feature-card__icon" xmlns="http://www.w3.org/2000/svg" width="112" height="112"
+                                viewBox="0 0 112 112" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M39.253 23.384C36.6906 23.1106 34.0993 23.3708 31.6424 24.1481C29.1854 24.9254 26.9161 26.203 24.9772 27.9005C23.0382 29.5979 21.4718 31.6784 20.3765 34.011C19.2811 36.3436 18.6806 38.8777 18.6128 41.4538C18.5449 44.0299 19.0112 46.5921 19.9822 48.9791C20.9532 51.3661 22.4079 53.5262 24.2548 55.3234L24.2843 55.352L56.0003 86.7638L61.1067 81.7064L55.0335 75.6332C53.2111 73.8107 53.2111 70.856 55.0335 69.0335C56.856 67.2111 59.8107 67.2111 61.6332 69.0335L67.7382 75.1386L72.8297 70.096L66.7002 63.9665C64.8777 62.1441 64.8777 59.1893 66.7002 57.3668C68.5226 55.5444 71.4774 55.5444 73.2998 57.3668L79.4612 63.5282L84.5525 58.4857L77.2001 51.1332C75.2904 49.2236 72.7005 48.1508 69.9999 48.1508C67.2993 48.1508 64.7093 49.2236 62.7997 51.1332L58.133 55.7998C53.0906 60.8423 44.9092 60.8423 39.8667 55.7998L37.3327 53.2658C35.583 51.5156 34.5995 49.1415 34.5995 46.6667C34.5995 44.1918 35.5825 41.8183 37.3322 40.068L49.5319 27.8683C48.6068 27.0627 47.602 26.348 46.5311 25.7364C44.2935 24.4582 41.8154 23.6573 39.253 23.384ZM58.9884 31.6112L43.9329 46.6667L46.4664 49.2002C47.8639 50.5977 50.1358 50.5977 51.5334 49.2002L56.2 44.5335C59.86 40.8736 64.8239 38.8175 69.9999 38.8175C75.1758 38.8175 80.1397 40.8736 83.7997 44.5335L90.7543 51.4881C91.2164 50.6996 91.6211 49.8764 91.9643 49.0246C92.9242 46.6418 93.382 44.0864 93.3089 41.5186C93.2359 38.9507 92.6336 36.4255 91.5398 34.1011C90.4459 31.7767 88.8841 29.7031 86.952 28.0101C85.0199 26.317 82.7591 25.041 80.3112 24.2619C77.8633 23.4828 75.2809 23.2173 72.7257 23.4821C70.1704 23.7469 67.6973 24.5363 65.4612 25.8008C63.2251 27.0654 61.274 28.7779 59.7302 30.8311C59.5115 31.1219 59.2622 31.383 58.9884 31.6112ZM93.9621 62.3025C94.0679 62.2155 94.1708 62.123 94.2704 62.0252C97.0194 59.325 99.1816 56.0864 100.622 52.5122C102.061 48.9379 102.748 45.105 102.638 41.2532C102.529 37.4013 101.625 33.6136 99.9847 30.127C98.344 26.6404 96.0012 23.53 93.1031 20.9904C90.2049 18.4509 86.8138 16.5369 83.1419 15.3682C79.47 14.1995 75.5964 13.8013 71.7636 14.1985C67.9307 14.5957 64.2211 15.7798 60.8669 17.6766C59.1276 18.6602 57.5032 19.8245 56.0194 21.147C54.5341 19.8082 52.9058 18.6289 51.1602 17.6319C47.8037 15.7147 44.0866 14.5133 40.243 14.1033C36.3994 13.6933 32.5125 14.0835 28.8271 15.2495C25.1417 16.4155 21.7376 18.3319 18.8293 20.878C15.9209 23.4242 13.5712 26.545 11.9282 30.0439C10.2852 33.5428 9.38444 37.3439 9.28266 41.208C9.18087 45.0721 9.88027 48.9154 11.3368 52.496C12.7906 56.0698 14.9673 59.3046 17.7303 61.9974L52.7164 96.6476C54.5351 98.4489 57.4654 98.4489 59.2841 96.6476L93.9621 62.3025Z" />
+                            </svg>
+                        </div>
+                        <div class="feature-card__content">
+                            <h3 class="feature-card__title">Mantener a tus seres queridos informados</h3>
+                            <p class="feature-card__description">
+                                Compartí el progreso y estado de tu tratamiento con familiares o cuidadores para que
+                                estén
+                                al tanto de tu bienestar.
+                            </p>
+                        </div>
+                        <div class="feature-card__illustration">
+                            <img class="feature-card__illustration--F3"
+                                src="/assets/illustration/feature-card-illustration.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="testimonial" class="section testimonial">
+            <div class="testimonial__content-wrap">
+                <div class="testimonial__overview">
+                    <h2 class="testimonial__title">Historias de nuestros usuarios</h2>
+                    <p class="testimonial__description">
+                        Miles de personas ya gestionan su tratamiento de manera sencilla con nuestra aplicación
+                    </p>
+                </div>
+                <div class="testimonial__cards">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__avatar">
+                            <img src="/assets/avatars/testimonial-avatar-rounded-1@x2.webp"
+                                alt="Foto de perfil del usuario Ana">
+                        </div>
+                        <div class="testimonial-card__content">
+                            <p class="testimonial-card__description">"Gracias a esta app, no me preocupo más por olvidar
+                                mis
+                                medicamentos.
+                                Los recordatorios son puntuales y me avisan si me estoy quedando sin stock. Además, mis
+                                hijos se
+                                sienten mucho más tranquilos al recibir informes sobre mi salud."</p>
+                            <p class="testimonial-card__label">Ana G., 65 años</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__avatar">
+                            <img src="/assets/avatars/testimonial-avatar-rounded-2@x2.webp" alt="Foto de perfil">
+                        </div>
+                        <div class="testimonial-card__content">
+                            <p class="testimonial-card__description">"Como cuidador de mi madre, la sincronización con
+                                la
+                                app me
+                                ha
+                                sido
+                                invaluable. Sé en todo momento si está siguiendo su tratamiento y puedo tomar medidas si
+                                algo no
+                                va como debería."</p>
+                            <p class="testimonial-card__label">Carlos M., 38 años</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__avatar">
+                            <img src="/assets/avatars/testimonial-avatar-rounded-3@x2.webp" alt="">
+                        </div>
+                        <div class="testimonial-card__content">
+                            <p class="testimonial-card__description">"El sistema de análisis predictivo me ha ayudado a
+                                planificar
+                                mejor las compras de mis medicamentos. Es increíble saber exactamente cuándo necesitaré
+                                reabastecerme."</p>
+                            <p class="testimonial-card__label">Laura P., 29 años</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="faq" class="section faq">
+            <div class="faq__content-wrap">
+                <div class="faq__overview">
+                    <h2 class="faq__title">Dudas comunes sobre nuestra app</h2>
+                    <p class="faq__description">
+                        Aquí respondemos algunas de las dudas más comunes para que puedas empezar a usar nuestra
+                        plataforma sin complicaciones.
+                    </p>
+                </div>
+                <div class="faq__cards">
+                    <div class="faq__cards-wrap">
+                        <div class="faq-card">
+                            <h3 class="faq-card__title">
+                                ¿Cómo agrego mis medicamentos en la app?
+                            </h3>
+                            <p class="faq-card__description faq-card__description--visible">
+                                Simplemente selecciona <b>Agregar medicamento</b>, ingresa el nombre, dosis, frecuencia y
+                                duración del tratamiento. Luego podrás configurar recordatorios.
+                            </p>
+                            <button class="faq-card__toggle">
+                                <svg class="faq-card__toggle-icon faq-card__toggle-icon--chevron-down"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M9.72402 12.3905C10.2447 11.8698 11.0889 11.8698 11.6096 12.3905L16.0002 16.781L20.3907 12.3905C20.9114 11.8698 21.7556 11.8698 22.2763 12.3905C22.797 12.9112 22.797 13.7554 22.2763 14.2761L16.943 19.6095C16.4223 20.1302 15.5781 20.1302 15.0574 19.6095L9.72402 14.2761C9.20332 13.7554 9.20332 12.9112 9.72402 12.3905Z" />
+                                </svg>
+                                <svg class="faq-card__toggle-icon faq-card__toggle-icon--chevron-up"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.0574 12.3905C15.5781 11.8698 16.4223 11.8698 16.943 12.3905L22.2763 17.7239C22.797 18.2446 22.797 19.0888 22.2763 19.6095C21.7556 20.1302 20.9114 20.1302 20.3907 19.6095L16.0002 15.219L11.6096 19.6095C11.0889 20.1302 10.2447 20.1302 9.72402 19.6095C9.20332 19.0888 9.20332 18.2446 9.72402 17.7239L15.0574 12.3905Z" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="faq-card">
+                            <h3 class="faq-card__title">
+                                ¿Puedo agregar varios medicamentos con diferentes horarios de toma?
+                            </h3>
+                            <p class="faq-card__description">
+                                Sí, puedes añadir tantos medicamentos como necesites, cada uno con su propio horario de
+                                recordatorios y detalles específicos. La app te permite gestionar tratamientos complejos
+                                de
+                                forma sencilla.
+                            </p>
+                            <button class="faq-card__toggle">
+                                <svg class="faq-card__toggle-icon faq-card__toggle-icon--chevron-down"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M9.72402 12.3905C10.2447 11.8698 11.0889 11.8698 11.6096 12.3905L16.0002 16.781L20.3907 12.3905C20.9114 11.8698 21.7556 11.8698 22.2763 12.3905C22.797 12.9112 22.797 13.7554 22.2763 14.2761L16.943 19.6095C16.4223 20.1302 15.5781 20.1302 15.0574 19.6095L9.72402 14.2761C9.20332 13.7554 9.20332 12.9112 9.72402 12.3905Z" />
+                                </svg>
+                                <svg class="faq-card__toggle-icon faq-card__toggle-icon--chevron-up"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.0574 12.3905C15.5781 11.8698 16.4223 11.8698 16.943 12.3905L22.2763 17.7239C22.797 18.2446 22.797 19.0888 22.2763 19.6095C21.7556 20.1302 20.9114 20.1302 20.3907 19.6095L16.0002 15.219L11.6096 19.6095C11.0889 20.1302 10.2447 20.1302 9.72402 19.6095C9.20332 19.0888 9.20332 18.2446 9.72402 17.7239L15.0574 12.3905Z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="faq__cards-wrap">
+                        <div class="faq-card">
+                            <h3 class="faq-card__title">
+                                ¿Puedo agregar a más de un familiar o cuidador?
+                            </h3>
+                            <p class="faq-card__description">
+                                Sí, puedes agregar múltiples contactos de confianza que recibirán notificaciones y
+                                resúmenes
+                                sobre el estado de tu tratamiento
+                            </p>
+                            <button class="faq-card__toggle">
+                                <svg class="faq-card__toggle-icon faq-card__toggle-icon--chevron-down"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M9.72402 12.3905C10.2447 11.8698 11.0889 11.8698 11.6096 12.3905L16.0002 16.781L20.3907 12.3905C20.9114 11.8698 21.7556 11.8698 22.2763 12.3905C22.797 12.9112 22.797 13.7554 22.2763 14.2761L16.943 19.6095C16.4223 20.1302 15.5781 20.1302 15.0574 19.6095L9.72402 14.2761C9.20332 13.7554 9.20332 12.9112 9.72402 12.3905Z" />
+                                </svg>
+                                <svg class="faq-card__toggle-icon faq-card__toggle-icon--chevron-up"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.0574 12.3905C15.5781 11.8698 16.4223 11.8698 16.943 12.3905L22.2763 17.7239C22.797 18.2446 22.797 19.0888 22.2763 19.6095C21.7556 20.1302 20.9114 20.1302 20.3907 19.6095L16.0002 15.219L11.6096 19.6095C11.0889 20.1302 10.2447 20.1302 9.72402 19.6095C9.20332 19.0888 9.20332 18.2446 9.72402 17.7239L15.0574 12.3905Z" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="faq-card">
+                            <h3 class="faq-card__title">
+                                ¿Cómo funciona el análisis predictivo con IA?
+                            </h3>
+                            <p class="faq-card__description">
+                                La IA analiza tu consumo de medicamentos y te sugiere cuándo será necesario reabastecer
+                                tu
+                                stock, ayudándote a planificar mejor tus compras.
+                            </p>
+                            <button class="faq-card__toggle">
+                                <svg class="faq-card__toggle-icon faq-card__toggle-icon--chevron-down"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M9.72402 12.3905C10.2447 11.8698 11.0889 11.8698 11.6096 12.3905L16.0002 16.781L20.3907 12.3905C20.9114 11.8698 21.7556 11.8698 22.2763 12.3905C22.797 12.9112 22.797 13.7554 22.2763 14.2761L16.943 19.6095C16.4223 20.1302 15.5781 20.1302 15.0574 19.6095L9.72402 14.2761C9.20332 13.7554 9.20332 12.9112 9.72402 12.3905Z" />
+                                </svg>
+                                <svg class="faq-card__toggle-icon faq-card__toggle-icon--chevron-up"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.0574 12.3905C15.5781 11.8698 16.4223 11.8698 16.943 12.3905L22.2763 17.7239C22.797 18.2446 22.797 19.0888 22.2763 19.6095C21.7556 20.1302 20.9114 20.1302 20.3907 19.6095L16.0002 15.219L11.6096 19.6095C11.0889 20.1302 10.2447 20.1302 9.72402 19.6095C9.20332 19.0888 9.20332 18.2446 9.72402 17.7239L15.0574 12.3905Z" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="faq-card">
+                            <h3 class="faq-card__title">
+                                ¿Es segura la información que ingreso en la app?
+                            </h3>
+                            <p class="faq-card__description">
+                                Sí, toda tu información está protegida con altos estándares de seguridad y encriptación.
+                                Tu
+                                privacidad es nuestra prioridad.
+                            </p>
+                            <button class="faq-card__toggle">
+                                <svg class="faq-card__toggle-icon faq-card__toggle-icon--chevron-down"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M9.72402 12.3905C10.2447 11.8698 11.0889 11.8698 11.6096 12.3905L16.0002 16.781L20.3907 12.3905C20.9114 11.8698 21.7556 11.8698 22.2763 12.3905C22.797 12.9112 22.797 13.7554 22.2763 14.2761L16.943 19.6095C16.4223 20.1302 15.5781 20.1302 15.0574 19.6095L9.72402 14.2761C9.20332 13.7554 9.20332 12.9112 9.72402 12.3905Z" />
+                                </svg>
+                                <svg class="faq-card__toggle-icon faq-card__toggle-icon--chevron-up"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.0574 12.3905C15.5781 11.8698 16.4223 11.8698 16.943 12.3905L22.2763 17.7239C22.797 18.2446 22.797 19.0888 22.2763 19.6095C21.7556 20.1302 20.9114 20.1302 20.3907 19.6095L16.0002 15.219L11.6096 19.6095C11.0889 20.1302 10.2447 20.1302 9.72402 19.6095C9.20332 19.0888 9.20332 18.2446 9.72402 17.7239L15.0574 12.3905Z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="section about">
+            <div class="about__content-wrap">
+                <div class="about__overview">
+                    <h2 class="about__title">Sobre nosotros</h2>
+                    <p class="about__description">
+                        Nuestra misión es facilitar la gestión de tratamientos médicos, ayudando a los pacientes y sus
+                        familiares a mantenerse organizados y saludables
+                    </p>
+                </div>
+                <div class="about__cards">
+                    <div class="card-team">
+                        <h3 class="card-team__title">Personas que forman parte de MediPlan</h3>
+                        <div class="card-team__avatars">
+                            <img src="/assets/avatars/team-avatar-rounded-1@x2.webp"
+                                alt="Fotografía de un empleado de MediPlan" class="card-team__avatar">
+                            <img src="/assets/avatars/team-avatar-rounded-2@x2.webp"
+                                alt="Fotografía de un empleado de MediPlan" class="card-team__avatar">
+                            <img src="/assets/avatars/team-avatar-rounded-3@x2.webp"
+                                alt="Fotografía de un empleado de MediPlan" class="card-team__avatar">
+                            <img src="/assets/avatars/team-avatar-rounded-4@x2.webp"
+                                alt="Fotografía de un empleado de MediPlan" class="card-team__avatar">
+                            <img src="/assets/avatars/team-avatar-rounded-5@x2.webp"
+                                alt="Fotografía de un empleado de MediPlan" class="card-team__avatar">
+                            <img src="/assets/avatars/team-avatar-rounded-6@x2.webp"
+                                alt="Fotografía de un empleado de MediPlan" class="card-team__avatar">
+                            <img src="/assets/avatars/team-avatar-rounded-7@x2.webp"
+                                alt="Fotografía de un empleado de MediPlan" class="card-team__avatar">
+                            <img src="/assets/avatars/team-avatar-rounded-8@x2.webp"
+                                alt="Fotografía de un empleado de MediPlan" class="card-team__avatar">
+                            <img src="/assets/avatars/team-avatar-rounded-9@x2.webp"
+                                alt="Fotografía de un empleado de MediPlan" class="card-team__avatar">
+                        </div>
+                        <p class="card-team__description">
+                            Nuestro equipo está formado por expertos en tecnología, salud y diseño, unidos por la idea
+                            de
+                            mejorar la calidad de vida de los usuarios.
+                        </p>
+                    </div>
+                    <div class="card-boss">
+                        <img class="card-boss__img" src="/assets/images/about-boss-320@x2.webp"
+                            alt="Fotografía del CEO de MediPlan">
+                        <div class="card-boss__content">
+                            <p class="card-boss__description">
+                                “Después de ver a nuestros seres queridos lidiar con tratamientos médicos complejos, nos
+                                propusimos crear una solución que hiciera el proceso más fácil y menos estresante.”
+                            </p>
+                            <p class="card-boss__label">Martín Bruno, CEO de MediPlan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="download" class="section download">
+            <div class="download__content-wrap">
+                <div class="download__header">
+                    <h2 class="download__title">
+                        Descarga la app para tomar tus medicamentos siempre a tiempo
+                    </h2>
+                    <button class="btn btn--primary download__btn">
+                        Descargar aplicación
+                        <svg class="btn__icon--right" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 36 36" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M18 4.5C18.8284 4.5 19.5 5.17157 19.5 6V20.3787L24.4393 15.4393C25.0251 14.8536 25.9749 14.8536 26.5607 15.4393C27.1464 16.0251 27.1464 16.9749 26.5607 17.5607L19.0607 25.0607C18.4749 25.6464 17.5251 25.6464 16.9393 25.0607L9.43934 17.5607C8.85355 16.9749 8.85355 16.0251 9.43934 15.4393C10.0251 14.8536 10.9749 14.8536 11.5607 15.4393L16.5 20.3787V6C16.5 5.17157 17.1716 4.5 18 4.5ZM6 24C6.82843 24 7.5 24.6716 7.5 25.5V28.5C7.5 28.8978 7.65804 29.2794 7.93934 29.5607C8.22064 29.842 8.60218 30 9 30H27C27.3978 30 27.7794 29.842 28.0607 29.5607C28.342 29.2794 28.5 28.8978 28.5 28.5V25.5C28.5 24.6716 29.1716 24 30 24C30.8284 24 31.5 24.6716 31.5 25.5V28.5C31.5 29.6935 31.0259 30.8381 30.182 31.682C29.3381 32.5259 28.1935 33 27 33H9C7.80653 33 6.66193 32.5259 5.81802 31.682C4.97411 30.8381 4.5 29.6935 4.5 28.5V25.5C4.5 24.6716 5.17157 24 6 24Z"
+                                fill="white" />
+                        </svg>
+                    </button>
+                </div>
+                <img class="download__img" src="/assets/images/download-img-320@x2.webp"
+                    alt="Fotografía de una persona descargando MediPlan con su teléfono.">
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__content-wrap">
             <div class="footer__logo-slogan">
                 <div class="footer__logo">
                     <img src="/assets/logo/mediplan-logo-white-32px.svg" alt="Logo de MediPlan color blanco">
                 </div>
-                <h3 class="footer__slogan">Tu plan de medicación siempre bajo control.</h3>
+                <h3 class="footer__slogan">Tu plan de medicación siempre bajo control</h3>
             </div>
             <div class="footer__actions">
                 <button class="btn btn--primary footer__btn-registration">Registrarme ahora</button>
                 <button class="btn btn--secondary footer__btn-download">Descargar App</button>
             </div>
-            <div class="footer__links">
-                <div class="footer__links__wrap">
-                    <h2 class="footer__links__title">Principal</h2>
-                    <ul class="footer__links__list">
+            <div class="footer__page-links">
+                <div class="footer__links-wrap">
+                    <h3 class="footer__page-links-title">Principal</h3>
+                    <ul class="footer__links-list">
                         <li><a class="footer__link" href="#feature">Nuestra aplicación</a></li>
                         <li><a class="footer__link" href="#about">Sobre nosotros</a></li>
                         <li><a class="footer__link" href="#testimonial">Testimonios de nuestros usuarios</a></li>
                     </ul>
                 </div>
-                <div class="footer__links__wrap">
-                    <h2 class="footer__links__title">Legal</h2>
-                    <ul class="footer__links__list">
+                <div class="footer__links-wrap">
+                    <h3 class="footer__page-links-title">Legal</h3>
+                    <ul class="footer__links-list">
                         <li><a class="footer__link" href="">Politica de privacidad</a></li>
                         <li><a class="footer__link" href="">Terminos y condiciones</a></li>
                         <li><a class="footer__link" href="">Soporte y Centro de ayuda</a></li>
@@ -382,15 +462,16 @@
             </div>
             <div class="footer__newsletter">
                 <form class="form">
-                    <label class="form__input__label" for="emailInput">Suscribete a nuestro Newsletter</label>
-                    <div class="form__input__wrap">
-                        <svg class="form__input__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <label class="form__input-label" for="emailInput">Suscribete a nuestro Newsletter</label>
+                    <div class="form__input-wrap">
+                        <svg class="form__input-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M5 6.00098C4.73478 6.00098 4.48043 6.10633 4.29289 6.29387C4.21971 6.36706 4.15904 6.45042 4.11226 6.54063L12 11.7991L19.8877 6.54063C19.841 6.45042 19.7803 6.36706 19.7071 6.29387C19.5196 6.10633 19.2652 6.00098 19 6.00098H5ZM20 8.86949L12.5547 13.833C12.2188 14.057 11.7812 14.057 11.4453 13.833L4 8.86949V17.001C4 17.2662 4.10536 17.5205 4.29289 17.7081C4.48043 17.8956 4.73478 18.001 5 18.001H19C19.2652 18.001 19.5196 17.8956 19.7071 17.7081C19.8946 17.5205 20 17.2662 20 17.001V8.86949ZM2.87868 4.87966C3.44129 4.31705 4.20435 4.00098 5 4.00098H19C19.7957 4.00098 20.5587 4.31705 21.1213 4.87966C21.6839 5.44227 22 6.20533 22 7.00098V17.001C22 17.7966 21.6839 18.5597 21.1213 19.1223C20.5587 19.6849 19.7957 20.001 19 20.001H5C4.20435 20.001 3.44129 19.6849 2.87868 19.1223C2.31607 18.5597 2 17.7966 2 17.001V7.00098C2 6.20533 2.31607 5.44227 2.87868 4.87966Z"
                                 fill="#B5B7BC" />
                         </svg>
                         <input class="form__input" type="email" name="email" id="emailInput"
-                            placeholder="Escriba su correo electrónico">
+                            placeholder="Correo electrónico">
                     </div>
                 </form>
             </div>
@@ -421,7 +502,7 @@
                 </a>
             </div>
             <div class="footer__illustration">
-                <img src="/assets/footer-illustration-320.svg" alt="">
+                <img src="/assets/illustration/footer-illustration-320.svg" alt="">
             </div>
         </div>
     </footer>

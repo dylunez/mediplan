@@ -1,48 +1,70 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const navToggle = document.getElementById('navToggle');
-  const navLinks = document.getElementById('navLinks');
-  const iconBurger = document.querySelector('.nav__toggle__icon--burger');
-  const iconClose = document.querySelector('.nav__toggle__icon--close');
+// -----------------------------
+// NAVIGATION + OVERLAY
+// -----------------------------
+const navToggle = document.querySelectorAll('.nav__toggle-btn');
+const navOverlay = document.getElementById('overlay');
+const navItem = document.querySelectorAll('.overlay__link');
+const navBtnBurger = document.getElementById('nav-btn-burger');
 
+// Manejo del nav
+navToggle.forEach(btn => {
+  btn.addEventListener('click', () => {
+    navOverlay.classList.toggle('overlay--active');
 
-  navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('nav__links--active');
+    const isMenuOpen = navOverlay.classList.contains('overlay--active');
 
-    const isMenuOpen = navLinks.classList.contains('nav__links--active');
-    iconBurger.style.display = isMenuOpen ? 'none' : 'block';
-    iconClose.style.display = isMenuOpen ? 'block' : 'none';
+    navBtnBurger.setAttribute('aria-expanded', isMenuOpen ? 'true' : 'false');
+    navOverlay.hidden = !isMenuOpen;
+
+    document.body.style.overflow = isMenuOpen ? 'hidden' : '';
   });
+});
 
-  // const faqCard = document.getElementsByClassName('faq-card')
-  // const faqToggle = document.getElementsByClassName('faq-card__toggle');
-  // const faqIconOpen = document.querySelector('faq-card__toggle__icon--chevron-down');
-  // const faqIconClose = document.querySelector('faq-card__toggle__icon--chevron-up');
-  // const faqDesc = document.getElementsByClassName("faq-card__description");
+// Manejo de los items
+navItem.forEach(item => {
+  item.addEventListener('click', () => {
+    navOverlay.classList.remove('overlay--active');
+    navOverlay.hidden = true;
 
-  // faqToggle.addEventListener('click', () => {
-  //   faqDesc.classList.toggle('faq-card__description');
+    navBtnBurger.setAttribute('aria-expanded', 'false');
 
-  //   const isFaqOpen = faqCard.classList.contains('faq-card__description')
-  //   faqIconOpen.style.display = isFaqOpen ? 'none' : 'block';
-  //   faqIconClose.style.display = isFaqOpen ? 'block' : 'none';
-  // })
+    document.body.style.overflow = '';
+  });
+});
 
-  const toggleButtons = document.querySelectorAll('.faq-card__toggle');
+
+// -----------------------------
+// DYNAMIC NAV HEIGHT
+// -----------------------------
+const nav = document.getElementById("nav");
+
+function setNavHeight() {
+  const height = nav.offsetHeight;
+  document.documentElement.style.setProperty("--nav-height", `${height}px`);
+}
+
+setNavHeight();
+window.addEventListener("resize", setNavHeight);
+
+
+// -----------------------------
+// FAQ CARDS
+// -----------------------------
+const toggleButtons = document.querySelectorAll('.faq-card__toggle');
 
 toggleButtons.forEach((button) => {
   button.addEventListener('click', () => {
-    const card = button.closest('.faq-card'); // busca la tarjeta más cercana
+    const card = button.closest('.faq-card'); // buscar la tarjeta más cercana
     const description = card.querySelector('.faq-card__description');
-    const iconDown = button.querySelector('.faq-card__toggle__icon--chevron-down');
-    const iconUp = button.querySelector('.faq-card__toggle__icon--chevron-up');
+    const iconDown = button.querySelector('.faq-card__toggle-icon--chevron-down');
+    const iconUp = button.querySelector('.faq-card__toggle-icon--chevron-up');
 
-    // Alternamos la visibilidad de la descripción
+    // Alternar visibilidad de la descripción
     description.classList.toggle('faq-card__description--visible');
 
-    // Alternamos los íconos
+    // Alternar íconos
     const isVisible = description.classList.contains('faq-card__description--visible');
     iconDown.style.display = isVisible ? 'none' : 'block';
     iconUp.style.display = isVisible ? 'block' : 'none';
   });
-});
 });

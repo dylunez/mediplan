@@ -1,0 +1,954 @@
+@media (min-width: 600px) {
+  /* ========================
+   LAYOUT GLOBAL
+  ======================== */
+
+  .btn {
+    font-size: var(--btn--medium--font-size);
+    line-height: var(--btn--medium--line-height);
+    padding: var(--btn--medium--padding);
+    border-radius: var(--btn--medium--border-radius);
+  }
+
+  .btn__icon--left,
+  .btn__icon--right {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .section {
+    padding: 5rem 1.5rem;
+    scroll-margin: 3rem;
+  }
+
+  .feature__content-wrap {
+    gap: 2.5rem;
+  }
+
+  .testimonial__content-wrap,
+  .faq__content-wrap,
+  .about__content-wrap {
+    gap: 5rem;
+  }
+
+  .testimonial__overview,
+  .faq__overview,
+  .about__overview {
+    gap: 1rem;
+    margin-left: 0.5rem;
+    width: 100%;
+    max-width: 42.5rem;
+  }
+
+  .feature__title,
+  .testimonial__title,
+  .faq__title,
+  .about__title {
+    font-size: 2.5rem;
+    line-height: 4rem;
+  }
+
+  .feature__title {
+    width: 100%;
+  }
+
+  .testimonial__description,
+  .faq__description,
+  .about__description {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .feature__cards,
+  .testimonial__cards,
+  .faq__cards,
+  .faq__cards-wrap,
+  .about__cards {
+    gap: 1rem;
+  }
+
+
+  /* ========================
+   HERO
+  ======================== */
+
+  .hero {
+    height: calc(100dvh - var(--nav-height));
+    padding: 1.5rem;
+    scroll-margin: var(--nav-height);
+  }
+
+  .hero__content-wrap {
+    justify-content: center;
+    gap: 0;
+    height: 100%;
+    padding: 0 2.5rem;
+    border-radius: 2rem;
+    background-image: url(/assets/images/hero-img-768@x2.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .hero__img {
+    display: none;
+  }
+
+  .hero__title,
+  .hero__description {
+    width: 27.5rem;
+  }
+
+  .hero__title {
+    font-size: 2.5rem;
+    line-height: 4rem;
+    color: var(--color--neutral-08);
+  }
+
+  .hero__description {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    margin: 1rem 0 2.5rem 0;
+    color: var(--color--neutral-06);
+  }
+
+  .btn-hero {
+    width: fit-content;
+  }
+
+
+  /* ========================
+   FEATURE
+  ======================== */
+
+  .feature__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .feature-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 3.5rem 2.5rem;
+  }
+
+  .feature-card__icon-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-right: 0;
+  }
+
+  .feature-card__icon {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .feature-card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .feature-card:nth-child(3) {
+    justify-self: center;
+    grid-column: 1 / -1;
+    width: 32.5rem;
+  }
+
+  .feature-card__title {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+
+  .feature-card__description {
+    margin-top: 0;
+  }
+
+  .feature-card__illustration {
+    position: absolute;
+    z-index: 0;
+    display: block;
+    width: 9.5rem;
+    height: 8.5rem;
+    top: 0%;
+    right: 0%;
+    left: auto;
+    transform: none;
+  }
+
+
+  /* ========================
+   TESTIMONIAL
+  ======================== */
+
+  .testimonial__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+  }
+
+  .testimonial-card {
+    padding: 2rem 2rem;
+  }
+
+
+  /* ========================
+   FAQ
+  ======================== */
+
+  .faq__cards {
+    flex-direction: row;
+  }
+
+  .faq__cards-wrap {
+    flex-direction: column;
+    width: 100%;
+  }
+
+
+  /* ========================
+   ABOUT
+  ======================== */
+
+  .about__cards {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .card-team {
+    padding: 2rem 2rem;
+    grid-area: c;
+  }
+
+  .card-team__title {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+
+  .card-team__avatar {
+    margin-left: -2rem;
+  }
+
+  .card-boss {
+    padding: 2rem 2rem;
+    grid-area: b;
+  }
+
+  .card-boss__label {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .card-boss__img {
+    content: url(/assets/images/about-boss-768@x2.webp);
+    width: 100%;
+  }
+
+
+  /* ========================
+   DOWNLOAD
+  ======================== */
+
+  .download {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .download__content-wrap {
+    padding: 2.5rem 2.5rem 3.5rem 2.5rem;
+  }
+
+  .download__header {
+    align-items: center;
+  }
+
+  .download__title {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  .download__btn {
+    width: fit-content;
+  }
+
+
+  /* ========================
+   FOOTER
+  ======================== */
+
+  .footer {
+    padding: 0 1.5rem 1.5rem;
+  }
+
+  .footer__content-wrap {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas:
+      "logo"
+      "links"
+      "social"
+      "form"
+      "actions";
+    padding: 7.5rem 3.5rem 5rem;
+  }
+
+  .footer__logo-slogan {
+    align-items: start;
+    grid-area: logo;
+  }
+
+  .footer__logo {
+    content: url(/assets/logo/mediplan-logo-white-56px.svg);
+    width: 17.5rem;
+    height: 3.5rem;
+  }
+
+  .footer__slogan {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    font-weight: var(--font-family--weight--light);
+    text-align: left;
+    width: 75%;
+  }
+
+  .footer__page-links {
+    flex-direction: row;
+    margin: 5rem 0rem;
+    gap: 2.5rem;
+    grid-area: links;
+  }
+
+  .footer__page-links-title {
+    text-align: left;
+  }
+
+  .footer__links-list {
+    align-items: start;
+  }
+
+  .footer__newsletter {
+    width: 60%;
+    grid-area: form;
+  }
+
+  .form__input-label {
+    text-align: left;
+  }
+
+  .form__input-wrap {
+    padding: 1rem 1rem;
+    height: 3.5rem;
+  }
+
+  .form__input {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  input[type="email"]::placeholder {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .footer__social-media {
+    justify-content: start;
+    grid-area: social;
+  }
+
+  .footer__actions {
+    flex-direction: row-reverse;
+    margin: 0;
+    gap: 1.5rem;
+    grid-area: actions;
+  }
+
+  .footer__illustration {
+    content: url(/assets/illustration/footer-illustration-768.svg);
+    width: 12rem;
+    height: 22rem;
+  }
+}
+
+
+@media (min-width: 720px) {
+
+  .download__content-wrap {
+    flex-direction: row;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .download__header {
+    flex: 0 0 19rem;
+    min-width: 19rem;
+    align-items: start;
+  }
+
+  .download__title {
+    text-align: left;
+  }
+
+  .download__btn {
+    width: fit-content;
+  }
+
+  .download__img {
+    content: url(/assets/images/download-img-1920@x2.webp);
+    height: 25rem;
+    min-width: 0;
+    flex: 1 1 auto
+  }
+}
+
+
+@media (min-width: 1024px) {
+
+  /* ========================
+   LAYOUT GLOBAL
+  ======================== */
+
+  .hero__content-wrap {
+    background-image: url(/assets/images/hero-img-1920@x2.webp);
+  }
+
+  .hero__title {
+    width: 35.5rem;
+  }
+
+  .hero__description {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    width: 35.5rem;
+  }
+
+
+  /* ========================
+   FEATURE
+  ======================== */
+
+  .feature__cards {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .feature-card,
+  .feature-card:nth-child(3) {
+    width: 100%;
+  }
+
+  .feature-card__title {
+    font-size: 1.5rem;
+  }
+
+
+  /* ========================
+   FAQ
+  ======================== */
+
+  .faq-card {
+    padding: 2.5rem 2.5rem;
+  }
+
+  .faq-card__title {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+
+  .faq-card__toggle {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .faq-card__toggle-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+
+  /* ========================
+   ABOUT
+  ======================== */
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about__overview {
+    margin-bottom: 0;
+  }
+
+  .about__cards {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .card-team {
+    padding: 2.5rem 2.5rem;
+    gap: 2.5rem;
+  }
+
+  .card-team__title {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+
+  .card-team__avatar {
+    width: 5rem;
+    height: 5rem;
+    margin-left: -3.5rem;
+  }
+
+  .card-boss {
+    padding: 2.5rem 2.5rem;
+  }
+
+  .card-boss__img {
+    content: url(/assets/images/about-boss-1920@x2.webp);
+    width: 100%;
+    height: auto;
+  }
+
+
+  /* ========================
+   DOWNLOAD
+  ======================== */
+
+  .download__content-wrap {
+    flex-direction: row;
+    align-items: center;
+    padding: 5rem 5rem;
+    gap: 2.5rem;
+  }
+
+  .download__header {
+    flex: 0 0 28.5rem;
+  }
+
+  .download__img {
+    border-radius: 2rem;
+  }
+
+
+  /* ========================
+   FOOTER
+  ======================== */
+
+  .footer {
+    padding: 0 1.5rem 2.5rem;
+  }
+
+  .footer__content-wrap {
+    grid-template-areas:
+      "logo links"
+      "social links"
+      "form links"
+      "actions actions";
+  }
+
+  .footer__logo-slogan {
+    width: min-content;
+  }
+
+  .footer__slogan {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    width: 18rem;
+    margin-bottom: 5rem;
+  }
+
+  .footer__page-links {
+    margin: 0;
+  }
+
+  .footer__link {
+    text-align: start;
+  }
+
+  .footer__newsletter {
+    width: 22.5rem;
+    margin: 3.5rem 0 7.5rem;
+  }
+
+  .footer__actions {
+    justify-content: flex-end;
+  }
+
+  .footer__actions button {
+    width: fit-content;
+  }
+
+  .footer__illustration {
+    content: url(/assets/illustration/footer-illustration-1024.svg);
+    top: unset;
+    bottom: 0%;
+  }
+}
+
+
+@media (min-width: 1280px) {
+
+  .btn {
+    font-size: var(--btn--large--font-size);
+    line-height: var(--btn--large--line-height);
+    padding: var(--btn--large--padding);
+    border-radius: var(--btn--large--border-radius);
+  }
+
+  .btn__icon--left,
+  .btn__icon--right {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .nav {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .nav__head {
+    width: auto;
+  }
+
+  .nav__toggle-btn {
+    display: none;
+  }
+
+  .nav__menu {
+    display: flex;
+  }
+
+  .section {
+    padding: 7.5rem 2.5rem;
+    scroll-margin-top: 0rem;
+  }
+
+  .download,
+  .footer {
+    padding: 2.5rem;
+  }
+
+  .footer {
+    padding: 0 2.5rem 2.5rem;
+  }
+
+  .hero__title,
+  .feature__title,
+  .testimonial__title,
+  .faq__title,
+  .about__title {
+    font-size: 3.5rem;
+    line-height: 5.5rem;
+  }
+
+  .hero__description {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+
+  .hero__title,
+  .hero__description {
+    width: 40.5rem;
+  }
+
+  .hero__content-wrap {
+    padding: 0 5rem;
+  }
+
+  .feature-card__title {
+    font-size: 1.75rem;
+    line-height: 3rem;
+  }
+
+  .feature-card__description,
+  .testimonial-card__description,
+  .faq-card__description,
+  .card-team__description,
+  .card-boss__description {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+
+  .testimonial-card {
+    padding: 4rem 2.5rem;
+  }
+
+  .testimonial-card__label,
+  .card-boss__label {
+    font-size: 1.125rem;
+    line-height: 2rem;
+  }
+
+  .testimonial-card__avatar img {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .faq-card__title {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+
+  .card-boss {
+    flex-direction: row;
+    gap: 2.5rem;
+  }
+
+  .card-boss__img {
+    height: 22.5rem;
+    min-width: 14rem;
+    flex: 1 1 auto
+  }
+
+  .download__header {
+    flex: 0 0 39rem;
+  }
+
+  .download__title {
+    font-size: 3rem;
+    line-height: 4.5rem;
+  }
+
+  .download__img {
+    height: 28.5rem;
+  }
+
+}
+
+
+@media (min-width: 1440px) {
+
+  .nav {
+    padding: 0.75rem 2.5rem;
+  }
+
+  .section {
+    scroll-margin-top: 2rem;
+  }
+
+  .feature__cards,
+  .testimonial__cards,
+  .faq__cards,
+  .faq__cards-wrap,
+  .about__cards {
+    gap: 1.5rem;
+  }
+
+
+  /* ========================
+   HERO
+  ======================== */
+
+  .hero {
+    padding: 1.5rem 2.5rem 2.5rem 2.5rem;
+  }
+
+  .hero__content {
+    height: 62.5rem;
+    padding: 0 5rem;
+  }
+
+  .hero__title {
+    width: 50rem;
+  }
+
+  .hero__description {
+    font-size: 1.5rem;
+    width: 50rem;
+  }
+
+
+  /* ========================
+   FEATURE
+  ======================== */
+
+  .feature-card {
+    padding: 5rem 2.5rem;
+  }
+
+  .feature-card__title {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  .feature-card__icon-wrap {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+
+  .feature-card__icon {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+
+  /* ========================
+   TESTIMONIAL
+  ======================== */
+
+  .testimonial__cards {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .testimonial-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4rem 4rem;
+  }
+
+  .testimonial-card__description {
+    margin: 2.5rem 0 1rem;
+  }
+
+  .testimonial-card__avatar img {
+    margin: 0;
+  }
+
+
+  /* ========================
+   ABOUT
+  ======================== */
+
+  .card-team {
+    min-width: 41.25rem;
+    padding: 5rem 3.5rem;
+  }
+
+  .card-team__title {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  .card-team__avatar {
+    width: 7.5rem;
+    height: 7.5rem;
+    margin-left: -5rem;
+  }
+
+  .card-boss {
+    min-width: 41.25rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .card-boss__content {
+    min-width: 19rem;
+  }
+
+  .card-boss__img {
+    height: 25rem;
+  }
+
+
+  /* ========================
+   DOWNLOAD
+  ======================== */
+
+  .download {
+    padding: 2.5rem 2.5rem;
+  }
+
+
+  /* ========================
+   FOOTER
+  ======================== */
+
+  .footer {
+    padding: 2.5rem 2.5rem;
+  }
+
+  .footer__content-wrap {
+    padding: 7.5rem 5rem 5rem;
+  }
+
+  .footer__page-links {
+    margin-left: 7rem;
+    gap: 4rem;
+  }
+
+  .footer__page-links-title {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  .footer__link {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+
+  .footer__illustration {
+    content: url(/assets/illustration/footer-illustration-1440.svg);
+    width: 43rem;
+    height: auto;
+    right: 3.5rem;
+  }
+}
+
+
+@media (min-width: 1536px) {
+  
+  .section {
+    scroll-margin-top: -1rem;
+  }
+
+  .feature {
+    scroll-margin-top: 2rem;
+  }
+}
+
+
+@media (min-width: 1920px) {
+
+  .nav__link {
+    padding: 0.75rem 1rem;
+  }
+
+  .card-boss {
+    padding: 3.5rem;
+    gap: 3.5rem;
+  }
+
+  .card-download {
+    gap: 5rem;
+  }
+
+  .download__header {
+    flex: 0 0 55rem;
+  }
+
+  .download__title {
+    font-size: 4rem;
+    line-height: 6rem;
+  }
+
+  .download__img {
+    height: 40rem;
+  }
+
+  .footer__content-wrap {
+    padding: 12.5rem 5rem 5rem;
+  }
+
+  .footer__newsletter {
+    margin: 3.5rem 0 15.5rem;
+  }
+
+  .footer__illustration {
+    content: url(/assets/illustration/footer-illustration-1920.svg);
+    width: 70rem;
+    height: auto;
+    right: 2rem;
+  }
+}

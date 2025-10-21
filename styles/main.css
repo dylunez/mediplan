@@ -1,0 +1,293 @@
+@import url(/styles/reset.css);
+@import url(/styles/variables.css);
+@import url(/styles/components.css);
+
+
+/* ========================
+   TYPOGRAPHY
+======================== */
+
+h2 {
+  font-family: var(--font-family--base);
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-weight: var(--font-family--weight--regular);
+  color: var(--color--neutral-06);
+}
+
+p {
+  font-family: var(--font-family--base);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: var(--font-family--weight--regular);
+  color: var(--color--neutral-05);
+}
+
+img {
+  object-fit: cover;
+}
+
+
+/* ========================
+   LAYOUT GLOBAL
+======================== */
+
+header {
+  position: sticky;
+  z-index: 999;
+  top: 0%;
+  border-bottom: 1px solid var(--color--neutral-01);
+}
+
+.section {
+  scroll-margin-top: 2rem;
+  width: 100%;
+  padding: 4rem 1rem;
+}
+
+.section__overview {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hero__content-wrap,
+.feature__content-wrap,
+.testimonial__content-wrap,
+.faq__content-wrap,
+.about__content-wrap,
+.download__content-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.testimonial__overview,
+.faq__overview,
+.about__overview {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+  .feature__cards,
+  .testimonial__cards,
+  .faq__cards,
+  .about__cards {
+    gap: 0.5rem;
+  }
+
+
+/* ========================
+   HERO SECTION
+======================== */
+
+.hero {
+  padding: 1.5rem 1rem 1.5rem 1rem;
+  scroll-margin: var(--nav-height);
+}
+
+.hero__content-wrap {
+  gap: 1rem;
+}
+
+.hero__img {
+  border-radius: 1rem;
+  height: 21.5rem;
+  max-height: 25rem;
+  overflow: hidden;
+}
+
+.hero__description {
+  color: var(--color--neutral-04);
+}
+
+.btn-hero {
+  width: 100%;
+}
+
+
+/* ========================
+   FEATURE SECTION
+======================== */
+
+.feature__title {
+  text-align: center;
+}
+
+.feature__cards {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ========================
+   TESTIMONIAL SECTION
+======================== */
+
+.testimonial__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+
+/* ========================
+   FAQ SECTION
+======================== */
+
+.faq__cards {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq__cards-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+
+/* ========================
+   ABOUT SECTION
+======================== */
+
+.about {
+  padding: 4rem 1rem 0rem;
+}
+
+.about__cards {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ========================
+   DOWNLOAD SECTION
+======================== */
+
+.download {
+  padding: 1.5rem 1rem;
+}
+
+.download__content-wrap {
+  flex-direction: column-reverse;
+  background-color: var(--color--primary-01);
+  padding: 1.5rem 1.5rem 2.5rem 1.5rem;
+  border-radius: 2rem;
+}
+
+.download__header {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.download__title {
+  font-size: 1.125rem;
+  line-height: 2rem;
+  font-weight: var(--font-family--weight--regular);
+  text-align: center;
+}
+
+.download__btn {
+  width: 100%;
+}
+
+.download__img {
+  border-radius: 1.5rem;
+}
+
+
+/* ========================
+   FOOTER SECTION
+======================== */
+
+.footer {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.footer__content-wrap {
+  position: relative;
+  z-index: 1;
+  background-color: var(--color--neutral-06);
+  padding: 7.5rem 1.5rem 4rem 1.5rem;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.footer__logo-slogan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer__logo {
+  width: 9.75rem;
+  height: 2rem;
+}
+
+.footer__slogan {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  font-weight: var(--font-family--weight--regular);
+  text-align: center;
+  color: var(--color--neutral-02);
+}
+
+.footer__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 2rem 0 3.5rem 0;
+}
+
+.footer__actions button {
+  width: 100%;
+}
+
+.footer__links-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+
+.footer__page-links {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.footer__page-links-title {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-weight: var(--font-family--weight--medium);
+  text-align: center;
+  color: var(--color--neutral-00);
+}
+
+.footer__links-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.footer__newsletter {
+  display: flex;
+  flex-direction: column;
+  margin: 3.5rem 0 5rem 0;
+}
+
+.footer__illustration {
+  position: absolute;
+  width: 8.5rem;
+  height: 7.5rem;
+  top: 0%;
+  right: 0;
+  z-index: 0;
+  opacity: 0.4;
+}
