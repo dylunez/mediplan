@@ -84,7 +84,7 @@
     height: 100%;
     padding: 0 2.5rem;
     border-radius: 2rem;
-    background-image: url(/assets/images/hero-img-768@x2.webp);
+    background-image: url(../assets/images/hero-img-768@x2.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -248,7 +248,7 @@
   }
 
   .card-boss__img {
-    content: url(/assets/images/about-boss-768@x2.webp);
+    content: url(../assets/images/about-boss-768@x2.webp);
     width: 100%;
   }
 
@@ -305,7 +305,7 @@
   }
 
   .footer__logo {
-    content: url(/assets/logo/mediplan-logo-white-56px.svg);
+    content: url(../assets/logo/mediplan-logo-white-56px.svg);
     width: 17.5rem;
     height: 3.5rem;
   }
@@ -370,7 +370,7 @@
   }
 
   .footer__illustration {
-    content: url(/assets/illustration/footer-illustration-768.svg);
+    content: url(../assets/illustration/footer-illustration-768.svg);
     width: 12rem;
     height: 22rem;
   }
@@ -400,7 +400,7 @@
   }
 
   .download__img {
-    content: url(/assets/images/download-img-1920@x2.webp);
+    content: url(../assets/images/download-img-1920@x2.webp);
     height: 25rem;
     min-width: 0;
     flex: 1 1 auto
@@ -415,7 +415,7 @@
   ======================== */
 
   .hero__content-wrap {
-    background-image: url(/assets/images/hero-img-1920@x2.webp);
+    background-image: url(../assets/images/hero-img-1920@x2.webp);
   }
 
   .hero__title {
@@ -512,7 +512,7 @@
   }
 
   .card-boss__img {
-    content: url(/assets/images/about-boss-1920@x2.webp);
+    content: url(../assets/images/about-boss-1920@x2.webp);
     width: 100%;
     height: auto;
   }
@@ -587,7 +587,7 @@
   }
 
   .footer__illustration {
-    content: url(/assets/illustration/footer-illustration-1024.svg);
+    content: url(../assets/illustration/footer-illustration-1024.svg);
     top: unset;
     bottom: 0%;
   }
@@ -889,7 +889,7 @@
   }
 
   .footer__illustration {
-    content: url(/assets/illustration/footer-illustration-1440.svg);
+    content: url(../assets/illustration/footer-illustration-1440.svg);
     width: 43rem;
     height: auto;
     right: 3.5rem;
@@ -946,7 +946,7 @@
   }
 
   .footer__illustration {
-    content: url(/assets/illustration/footer-illustration-1920.svg);
+    content: url(../assets/illustration/footer-illustration-1920.svg);
     width: 70rem;
     height: auto;
     right: 2rem;
