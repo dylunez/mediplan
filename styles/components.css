@@ -487,31 +487,50 @@
 .form__input-wrap {
     display: flex;
     align-items: center;
-    padding: 0.75rem 0.75rem;
     border-radius: 0.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    background-color: rgba(255, 255, 255, 0.1);
-    height: 3rem;
+    border: 1px solid var(--color--neutral-04);
+    background-color: var(--color--neutral-05);
+    height: 3.5rem;
+    padding: 0 0.75rem;
+    overflow: hidden;
+}
+
+.form__input-wrap:hover {
+    border: 1px solid var(--color--neutral-02);
+}
+
+.form__input-wrap:focus-within {
+    border: 1px solid var(--color--neutral-02);
 }
 
 .form__input {
     width: 100%;
-    font-size: 1rem;
+    font-size: 0.875rem;
     line-height: 1.5rem;
     background: none;
     border-style: none;
+    outline: none;
+    color: var(--color--neutral-01);
+    padding: 1rem 0;
 }
 
 input[type="email"]::placeholder {
     font-size: 0.875rem;
     line-height: 1.5rem;
-    color: var(--color--neutral-02);
+    color: var(--color--neutral-03);
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px red inset !important;
+    box-shadow: 0 0 0 1000px var(--color--neutral-05) inset !important;
+    -webkit-text-fill-color: var(--color--neutral-01) !important;
+    transition: background-color 9999s ease-out, color 9999s ease-out;
 }
 
 .form__input-icon {
     width: 1.5rem;
     height: 1.5rem;
-    margin-right: 0.75rem;
+    margin-right: 0.5rem;
 }
 
 
